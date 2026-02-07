@@ -10,7 +10,7 @@ void printText(string text) { //dynimic text input
     cout << text << endl;
 }
 
-int main() {
+    int main() {
     // printHelloWorld();
     // printHelloWorld();
     // printHelloWorld();
