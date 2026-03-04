@@ -2,38 +2,6 @@
 #include <iostream>
 using namespace std;
 
-// auto createBook(int totalBook, int id[], string name[], double price[]) {
-//     if (totalBook == 100) {
-//         cout << "Library is full now!" << endl;
-//     } else {
-//
-//         cout << "Create New Book" << endl;
-//
-//         inputBookId:
-//             cout << "Please enter book ID: ";
-//         cin >> id[totalBook];
-//
-//         for (int i = 0; i < totalBook; i++) {
-//             if (id[totalBook] == id[i]) {
-//                 id[totalBook] = 0;
-//                 cout << "Book Id you entered is already exist" << endl;
-//                 goto inputBookId;
-//             }
-//         }
-//
-//         cout << "Please enter book name: ";
-//         cin.ignore();
-//         getline(cin, name[totalBook]);
-//
-//         cout << "Please enter book price: ";
-//         cin >> price[totalBook];
-//
-//         totalBook++;
-//     }
-//
-//     return make_tuple(totalBook, id, name, price);
-// }
-
 int main() {
 
     int id[100];
@@ -42,8 +10,8 @@ int main() {
     int choice;
     bool continues = true;
     int totalBook = 0;
-    int findById;
     bool isFound = false;
+    int findById = 0;
 
     cout << "======== Library Management System =======" << endl;
 
@@ -60,27 +28,16 @@ int main() {
         switch (choice) {
             case 1:
 
-                // auto [totalBook2, id2, name2, price2] = createBook(totalBook, id, name, price);
-
                 if (totalBook == 100) {
                     cout << "Library is full now!" << endl;
                 } else {
-
                     cout << "Create New Book" << endl;
 
-                    inputBookId:
-                        cout << "Please enter book ID: ";
+                    cout << "Please enter book ID: ";
                     cin >> id[totalBook];
 
-                    for (int i = 0; i < totalBook; i++) {
-                        if (id[totalBook] == id[i]) {
-                            id[totalBook] = 0;
-                            cout << "Book Id you entered is already exist" << endl;
-                            goto inputBookId;
-                        }
-                    }
-
                     cout << "Please enter book name: ";
+                    // cin >> name[totalBook];
                     cin.ignore();
                     getline(cin, name[totalBook]);
 
@@ -89,7 +46,6 @@ int main() {
 
                     totalBook++;
                 }
-
                 break;
             case 2:
                 cout << "Read All Book" << endl;
@@ -166,7 +122,6 @@ int main() {
         }
 
     }
-
 
 
     return 0;
