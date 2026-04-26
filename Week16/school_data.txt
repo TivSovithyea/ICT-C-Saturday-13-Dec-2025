@@ -1,0 +1,2 @@
+STUDENT,2,Dara V2,19,12
+TEACHER,1,Sopheak,25,Math
